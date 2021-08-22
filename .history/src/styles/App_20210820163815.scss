@@ -1,0 +1,19 @@
+@import './_variables.scss';
+
+html{
+    font-size: 62.5%;
+    img{
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+.header{
+    color: aqua;
+    &-inner{
+        color: brown;
+        &-active{
+            color: darkkhaki;
+        }
+    }
+}

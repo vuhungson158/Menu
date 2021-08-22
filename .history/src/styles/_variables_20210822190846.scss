@@ -1,0 +1,41 @@
+:root {
+    --spacing: 0;
+    --container_width: 0;
+    --columns: 0;
+
+    // Color
+    --color_1st: wheat;
+    --color_2nd: #eee;
+    --color_3rd: #6a5af9;
+    --color_4th: #3d6ef7;
+    --light: wheat;
+    --dark: black;
+
+    // Background Color
+    --background-color_1st: black;
+    --background-color_2nd: wheat;
+    --background-color_3rd: #6a5af9;
+    --background-color_4th: #3d6ef7;
+    --background-color_5th: #c6c6c6;
+    --background-color_6th: #ff6651;
+}
+
+[dark-mode="false"] {
+    --color_1st: var(--dark);
+    --background-color_1st: var(--light);
+}
+
+// Shadow
+$box-shadow-color: #555;
+
+// z-index
+$navbar_z-index: 99;
+
+// Height
+$navbar_height: 60px;
+
+// Width
+$breakpoint_mobile: 768px;
+$breakpoint_ipad: 1024px;
+$breakpoint_sm_pc: 1224px;
+$breakpoint_pc: 1824px;

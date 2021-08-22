@@ -1,0 +1,8 @@
+@keyframes dropDown {
+    0% {
+        transform-origin: bottom right 60px;
+    }
+    100% {
+        transform-origin: 0 0 0;
+    }
+}

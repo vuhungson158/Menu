@@ -1,0 +1,46 @@
+@import "./_variables";
+@import "./mixin";
+
+* {
+    box-sizing: border-box;
+    font-family: "Fira sans", sans-serif;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $navbar_z-index;
+    background-color: $background-color_1st;
+    color: $color_1st;
+    padding: 16px 32px;
+    box-shadow: 0 4px 4px 0 $color_1st ;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .setting{
+        display: block;
+        position: relative;
+        z-index: 1;
+        user-select: none;
+        appearance: none;
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+
+        span{
+            display: block;
+            position: relative;
+            width: 36px;
+            height: 12px;
+            margin-bottom: 6px;
+        }
+    }
+}

@@ -1,0 +1,136 @@
+@import "./_variables";
+@import "./mixin";
+
+* {
+    box-sizing: border-box;
+    font-family: "Fira sans", sans-serif;
+}
+body {
+    font-size: 10px;
+}
+
+@media (max-width: $breakpoint_mobile) {
+    .container {
+        max-width: 100%;
+    }
+}
+@media (min-width: $breakpoint_mobile) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: $breakpoint_ipad) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: $breakpoint_sm_pc) {
+    .container {
+        max-width: 1200px;
+    }
+}
+@media (min-width: $breakpoint_pc) {
+    .container {
+        max-width: 1800px;
+    }
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $navbar_z-index;
+    background-color: $background-color_1st;
+    color: $color_1st;
+    padding: 16px 32px;
+    box-shadow: 0 4px 4px 0 $color_1st;
+
+    .container {
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+            color: $color_1st;
+            font-size: 3.6rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        #clock {
+            font-size: 2.4rem;
+            font-weight: 600;
+        }
+
+        .setting-icon {
+            display: block;
+            position: relative;
+            z-index: 1;
+            user-select: none;
+            appearance: none;
+            border: none;
+            outline: none;
+            background: none;
+            cursor: pointer;
+
+            span {
+                display: block;
+                position: relative;
+                width: 36px;
+                height: 4px;
+                margin-bottom: 6px;
+                background-color: $background-color_2nd;
+                border-radius: 10%;
+                z-index: 1;
+                transform-origin: 0 0;
+                transition: 0.5s;
+            }
+
+            &:hover span:nth-child(2) {
+                background-color: $color_3rd;
+            }
+
+            &.active {
+                span:nth-child(1) {
+                    transform: translate(0px, -2px) rotate(45deg);
+                }
+                span:nth-child(2) {
+                    opacity: 0;
+                    transform: translateX(36px);
+                }
+                span:nth-child(3) {
+                    transform: translate(-3px, 3px) rotate(-45deg);
+                }
+            }
+            .setting-menu {
+                position: absolute;
+                right: 0;
+                border: 2px solid $color_2nd;
+                border-radius: 5%;
+                overflow: hidden;
+                padding: 12px;
+                background-color: $background-color_1st;
+                cursor: auto;
+                transition: 0.2s;
+                animation: rotateX ease-in-out;
+                
+                li {
+                    min-width: 120px;
+                    cursor: pointer;
+                    text-align: center;
+                    padding: 12px 8px;
+                    font-size: 1.6rem;
+                    transition: 0.2s;
+                    &:hover {
+                        transform: scale(1.2);
+                        color: $color_3rd;
+                    }
+                }
+            }
+        }
+    }
+}
