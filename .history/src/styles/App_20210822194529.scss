@@ -126,6 +126,7 @@ body {
             right: 0;
             border: 2px solid var(--color_2nd);
             border-radius: 5%;
+            // overflow: hidden;
             padding: 12px;
             background-color: var(--background-color_1st);
             cursor: auto;
@@ -176,41 +177,9 @@ body {
                     }
                 }
             }
-            .language-btn {
-                cursor: pointer;
-            }
-            .language-menu {
-                --width: 200px;
-                width: var(--width);
+            .language-menu{
                 position: absolute;
-                top: 0;
-                left: calc(-1 * var(--width));
-                border: 2px solid var(--color_2nd);
-                border-radius: 5%;
-                padding: 12px 0;
-                background-color: var(--background-color_1st);
-                cursor: auto;
-                animation: sliceFromRight 0.2s;
-                label {
-                    display: block;
-                    cursor: pointer;
-                    font-size: 2rem;
-                    margin: 12px 0;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 12px 0;
-                    transition: 0.2s;
-                    &.active {
-                        color: var(--color_3rd);
-                    }
-                    input[type="radio"] {
-                        appearance: none;
-                    }
-                    &:hover {
-                        color: var(--color_3rd);
-                    }
-                }
+                left: -100px;
             }
         }
     }
@@ -262,7 +231,7 @@ body {
                                 width: 100%;
                                 display: flex;
                                 text-decoration: none;
-                                color: var(--color_1st);
+                                color: var(--color_2nd);
                                 font-size: 2rem;
                                 .icon {
                                     position: relative;

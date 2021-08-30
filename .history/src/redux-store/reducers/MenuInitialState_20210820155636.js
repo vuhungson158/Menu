@@ -51,6 +51,7 @@ export const MenuInitialState = {
                 isBig: true,
                 isSm: false
             },
+
             {
                 id: uuidV4(),
                 name: "Steak 3",
@@ -67,6 +68,7 @@ export const MenuInitialState = {
                 isBig: true,
                 isSm: false
             },
+
             {
                 id: uuidV4(),
                 name: "Steak 5",

@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { switchMode } from '../../redux-store/actions/ThemeActions';
 import Clock from './Clock';
 import Setting from './Setting';
 
-const Navbar = () => {
+const Navbar = ({ theme, switchMode }) => {
 
     const nav_height = "-60px"
     const [isShowSetting, setShowSetting] = useState(false);
+    const [isShowLang, setShowLang] = useState(false);
+    const [isDark, setMode] = useState(theme);
+    const [activeLang, setActiveLang] = useState("en");
 
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
@@ -18,8 +23,17 @@ const Navbar = () => {
         prevScrollpos = currentScrollPos;
     }
 
+    const onSetMode = () => {
+        setMode(!isDark);
+        switchMode(!isDark)
+    }
+
+    const onClickLang = (event) => {
+        setActiveLang(event.target.value)
+    }
+
     return (
-        <nav id="navbar">
+        <nav id="navbar" >
             <div className="container">
                 <h1>Menu</h1>
                 <Clock />
@@ -37,5 +51,9 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+const mapStateToProps = state => ({
+    theme: state.theme.dark
+});
+
+export default connect(mapStateToProps, { switchMode })(Navbar)
 

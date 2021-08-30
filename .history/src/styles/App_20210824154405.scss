@@ -200,11 +200,7 @@ body {
                     justify-content: center;
                     align-items: center;
                     padding: 12px 0;
-                    transition: 0.2s;
-                    &.active {
-                        color: var(--color_3rd);
-                    }
-                    input[type="radio"] {
+                    input[type="radio"]{
                         appearance: none;
                     }
                     &:hover {
@@ -262,7 +258,7 @@ body {
                                 width: 100%;
                                 display: flex;
                                 text-decoration: none;
-                                color: var(--color_1st);
+                                color: var(--color_2nd);
                                 font-size: 2rem;
                                 .icon {
                                     position: relative;

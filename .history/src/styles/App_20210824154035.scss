@@ -191,24 +191,22 @@ body {
                 background-color: var(--background-color_1st);
                 cursor: auto;
                 animation: sliceFromRight 0.2s;
-                label {
-                    display: block;
-                    cursor: pointer;
-                    font-size: 2rem;
-                    margin: 12px 0;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 12px 0;
-                    transition: 0.2s;
-                    &.active {
-                        color: var(--color_3rd);
-                    }
-                    input[type="radio"] {
-                        appearance: none;
-                    }
-                    &:hover {
-                        color: var(--color_3rd);
+                table {
+                    width: 100%;
+                    tr {
+                        td {
+                            min-width: 24px;
+                            text-align: center;
+                            label {
+                                display: block;
+                                cursor: pointer;
+                                font-size: 1.5rem;
+                                margin: 12px 0;
+                                &:hover {
+                                    color: var(--color_3rd);
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -262,7 +260,7 @@ body {
                                 width: 100%;
                                 display: flex;
                                 text-decoration: none;
-                                color: var(--color_1st);
+                                color: var(--color_2nd);
                                 font-size: 2rem;
                                 .icon {
                                     position: relative;

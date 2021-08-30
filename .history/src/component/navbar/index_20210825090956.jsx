@@ -19,7 +19,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav id="navbar">
+        <nav id="navbar" >
             <div className="container">
                 <h1>Menu</h1>
                 <Clock />

@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Clock from './Clock';
 import Setting from './Setting';
 
-const Navbar = () => {
+const Navbar = ({ theme, switchMode }) => {
 
     const nav_height = "-60px"
     const [isShowSetting, setShowSetting] = useState(false);
+    
 
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
@@ -18,8 +19,10 @@ const Navbar = () => {
         prevScrollpos = currentScrollPos;
     }
 
+    
+
     return (
-        <nav id="navbar">
+        <nav id="navbar" >
             <div className="container">
                 <h1>Menu</h1>
                 <Clock />
@@ -37,5 +40,9 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+const mapStateToProps = state => ({
+    theme: state.theme.dark
+});
+
+export default connect(mapStateToProps, { switchMode })(Navbar)
 
